@@ -29,7 +29,6 @@
   - [📥 Installation](#-installation)
     - [Cargo (Cross-platform)](#cargo-cross-platform)
     - [Scoop (Windows)](#scoop-windows)
-    - [Winget (Windows)](#winget-windows)
   - [⚖️ License](#️-license)
 
 ---
@@ -128,15 +127,16 @@ cargo install olam
 
 ### Scoop (Windows)
 
+If you don't have **Scoop** installed yet, run this in your PowerShell:
 ```bash
-scoop bucket add dotxav [https://github.com/G4brielXavier/scoop-bucket](https://github.com/G4brielXavier/scoop-bucket)
-scoop install olam
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+irm get.scoop.sh | iex
 ```
-
-### Winget (Windows)
+Then, add the **dotxav** bucket and install **Olam**:
 
 ```bash
-winget install dotxav.Olam
+scoop bucket add dotxav https://github.com/G4brielXavier/scoop-bucket
+scoop install olam
 ```
 
 ## ⚖️ License

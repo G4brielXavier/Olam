@@ -1,9 +1,9 @@
 [package]
 name = "olam"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2024"
 authors = ["Gabriel Xavier <dotxavket@gmail.com>"]
-description = "Engine to manage timelines and chronology of worldbuilding and storytelling. Built in Rust and powered by Tequel"
+description = "High-performance CLI for worldbuilders and storytellers to manage complex timelines and chronologies. Built in Rust with high-speed memory-mapping and powered by the Tequel cryptographic engine."
 license = "BSD-3-Clause"
 repository = "https://github.com/G4brielXavier/Olam"
 readme = "README.md"
