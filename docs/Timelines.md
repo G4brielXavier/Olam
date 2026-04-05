@@ -62,10 +62,6 @@ olam expun <HASH>
 *Aliases: `vo`* <br>
 Permanently deletes a specific Year or Age.
 
-```bash
-olam void <YEAR> <AGE> 
-```
-
 Removing a Year:
 ```bash
 olam vo 10
@@ -73,14 +69,18 @@ olam vo 10
 
 Removing an Age:
 ```bash
-olam vo "AgeName"
+olam vo --age "AgeName"
 ```
 
-Removing a Year inside an Age:
+Removing a Year inside an Age (`< Events >`):
 ```bash
-olam vo "AgeName" 10
+olam vo -a "AgeName" -y 10
 ```
 
+Removing a note inside an Age (`< Between >`):
+```bash
+olam vo -a "AgeName" --pop
+```
 
 ---
 
