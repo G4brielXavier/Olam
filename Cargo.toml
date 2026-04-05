@@ -7,7 +7,7 @@ description = "Engine to manage timelines and chronology of worldbuilding and st
 license = "BSD-3-Clause"
 repository = "https://github.com/G4brielXavier/Olam"
 readme = "README.md"
-keywords = ["cli", "workflow", "productivity", "management"]
+keywords = ["cli", "workflow", "productivity", "management", "timeline"]
 categories = ["command-line-utilities"]
 
 

@@ -3,21 +3,27 @@ use clap::Subcommand;
 #[derive(Subcommand, Debug)]
 pub enum Commands {
 
+    /// To change Space's Metadata or Timeline's Metadata
     #[command(alias = "set")]
     Settings {
 
+        /// To change the name
         #[arg(short, long)]
         title: Option<String>,
 
+        /// To change the description
         #[arg(short, long)]
         desc: Option<String>,
 
+        /// To change the Timeline's limit of years
         #[arg(short, long)]
         max: Option<u32>,
 
+        /// To change the year name unit (as: "Ano", "Cycle", ...etc)
         #[arg(short, long)]
         yearname: Option<String>,
 
+        /// To change the age name unit (as: "Era", "Generation", ...etc)
         #[arg(short, long)]
         agename: Option<String>
 
