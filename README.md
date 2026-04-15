@@ -82,7 +82,7 @@ olam age "First Age" -d 100
 olam age "Fire Age" -b "Discovery of roasted meat"
 
 # Add a year in < Events >
-olam year "Fire Age" 45 "The Great Volcano Eruption"
+olam year -a "Fire Age" 45 "The Great Volcano Eruption"
 ```
 
 ### 6. Preview your Creation
