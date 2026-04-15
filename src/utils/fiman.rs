@@ -2,6 +2,7 @@ use std::fs;
 use std::env;
 use std::path::PathBuf;
 use std::io::{ Error, ErrorKind };
+use memmap2::Mmap;
 
 use dirs::data_local_dir;
 use tequel::encrypt::{ TequelEncrypt, TequelEncryption };
@@ -83,7 +84,10 @@ impl Fiman {
 
     pub fn read(&mut self, path: &PathBuf) -> Result<User, Box<dyn std::error::Error>> {
 
-        let content = fs::read_to_string(&path).map_err(|e| Error::new(ErrorKind::Other, e))?;
+        let file = fs::File::open(&path).map_err(|e| Error::new(ErrorKind::Other, e))?;
+        let mmap_orig = unsafe { Mmap::map(&file).map_err(|e| Error::new(ErrorKind::Other, e))? };
+
+        let content = String::from_utf8(mmap_orig.to_vec()).map_err(|e| Error::new(ErrorKind::Other, e))?;
         let enc_struct: TequelEncryption = serde_json::from_str(&content).map_err(|e| Error::new(ErrorKind::Other, e))?;
 
         let decrypted = self.teq.decrypt(&enc_struct, &self.user_private_key).map_err(|e| {
