@@ -1331,7 +1331,8 @@ pub fn matches(cmd: &Commands, hey: &Hey, fiman: &mut Fiman, user: &mut User) ->
                     for event in events.iter() {
 
                         if let Event::Year(year) = event {
-
+                            
+                            println!();
                             println!("−–—< {} {} >—–−", settings.year_name.yellow(), year.year.to_string().yellow());
                             println!();
                             for note in year.note.iter() {
@@ -1365,6 +1366,7 @@ pub fn matches(cmd: &Commands, hey: &Hey, fiman: &mut Fiman, user: &mut User) ->
                                 for note in year.note.iter() {
                                     println!("                {} {}", "•".dimmed(), note.dimmed());
                                 }
+                                println!();
 
                             }
 

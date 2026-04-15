@@ -1,6 +1,6 @@
 [package]
 name = "olam"
-version = "1.1.0"
+version = "1.1.1"
 edition = "2024"
 authors = ["Gabriel Xavier <dotxavket@gmail.com>"]
 description = "High-performance CLI for worldbuilders and storytellers to manage complex timelines and chronologies. Built in Rust with high-speed memory-mapping and powered by the Tequel cryptographic engine."
